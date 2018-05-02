@@ -1,10 +1,17 @@
 body {
-    background: linear-gradient(to bottom, #a9cdff 1%, #ffffff 100%);
+    background: linear-gradient(to bottom, #25303f 1%, #ffffff 100%);
     width: 100%;
     height: 100vh;
     position: relative;
     margin: 0;
 }
+
+header{
+    display : flex;
+    justify-content : space-between;
+    padding-top : 50px;
+}
+
 
 .background-bottom {
     background-image: url('../medias/background.png');
@@ -16,6 +23,7 @@ body {
     position: absolute;
     z-index: -2;
 }
+
 
 .logo {
     width: 350px;
@@ -109,7 +117,6 @@ body {
     height: 100%;
     width: 100%;
     max-width: 100%;
-    /* background: #333; */
 }
 
 .snow {
@@ -127,27 +134,25 @@ body {
 .snow--near {
     -webkit-animation-duration: 10s;
     animation-duration: 10s;
-    background-image: url("../medias/snow-large.png");
-    background-size: contain;
+
 }
 
 .snow--near+.snow--alt {
-    -webkit-animation-delay: 5s;
-    animation-delay: 5s;
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
 }
 
 .snow--mid {
-    -webkit-animation-duration: 20s;
-    animation-duration: 20s;
-    background-image: url("../medias/snow-medium.png");
-    background-size: contain;
+    -webkit-animation-duration: 30s;
+    animation-duration: 30s;
+
 }
 
 .snow--mid+.snow--alt {
     -webkit-animation-delay: 10s;
     animation-delay: 10s;
 }
-
+/* 
 .snow--far {
     -webkit-animation-duration: 30s;
     animation-duration: 30s;
@@ -158,7 +163,7 @@ body {
 .snow--far+.snow--alt {
     -webkit-animation-delay: 15s;
     animation-delay: 15s;
-}
+} */
 
 @-webkit-keyframes falling {
     0% {
