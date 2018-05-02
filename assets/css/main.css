@@ -28,8 +28,12 @@ body {
 }
 
 .wrap-text {
-    margin-top: 200px;
+    margin-top: 100px;
     z-index: 100;
+}
+
+.text-1, .text-2{
+    text-align :center;
 }
 
 .text-1 path {
@@ -38,6 +42,8 @@ body {
     animation: aniwing 2s ease-in forwards;
     -webkit-animation: aniwing 2s ease-in forwards;
 }
+
+
 
 @keyframes aniwing {
     0% {
@@ -83,9 +89,95 @@ body {
 
 @keyframes dash {
     from {
-      stroke-dashoffset: 1000;
+        stroke-dashoffset: 1000;
     }
     to {
-      stroke-dashoffset: 0;
+        stroke-dashoffset: 0;
     }
-  }
+}
+
+.winter-is-coming,
+.snow {
+    z-index: 100;
+    pointer-events: none;
+}
+
+.winter-is-coming {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    /* background: #333; */
+}
+
+.snow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-animation: falling linear infinite both;
+    animation: falling linear infinite both;
+    -webkit-transform: translate3D(0, -100%, 0);
+    transform: translate3D(0, -100%, 0);
+}
+
+.snow--near {
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    background-image: url("../medias/snow-large.png");
+    background-size: contain;
+}
+
+.snow--near+.snow--alt {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.snow--mid {
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
+    background-image: url("../medias/snow-medium.png");
+    background-size: contain;
+}
+
+.snow--mid+.snow--alt {
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+.snow--far {
+    -webkit-animation-duration: 30s;
+    animation-duration: 30s;
+    background-image: url("../medias/snow-light.png");
+    background-size: contain;
+}
+
+.snow--far+.snow--alt {
+    -webkit-animation-delay: 15s;
+    animation-delay: 15s;
+}
+
+@-webkit-keyframes falling {
+    0% {
+        -webkit-transform: translate3D(-7.5%, -100%, 0);
+        transform: translate3D(-7.5%, -100%, 0);
+    }
+    100% {
+        -webkit-transform: translate3D(7.5%, 100%, 0);
+        transform: translate3D(7.5%, 100%, 0);
+    }
+}
+
+@keyframes falling {
+    0% {
+        -webkit-transform: translate3D(-7.5%, -100%, 0);
+        transform: translate3D(-7.5%, -100%, 0);
+    }
+    100% {
+        -webkit-transform: translate3D(7.5%, 100%, 0);
+        transform: translate3D(7.5%, 100%, 0);
+    }
+}
