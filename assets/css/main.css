@@ -37,11 +37,12 @@ header{
 
 .wrap-text {
     margin-top: 100px;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .text-1, .text-2{
     text-align :center;
+    z-index: 1000;
 }
 
 .text-1 path {
@@ -129,6 +130,7 @@ header{
     animation: falling linear infinite both;
     -webkit-transform: translate3D(0, -100%, 0);
     transform: translate3D(0, -100%, 0);
+
 }
 
 .snow--near {
