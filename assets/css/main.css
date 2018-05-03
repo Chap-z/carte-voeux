@@ -1,5 +1,6 @@
 body {
     overflow: hidden;
+    width : 100%;
 }
 
 #wrap-body {
@@ -56,11 +57,24 @@ header {
     width: 250px;
     height : 150px;
     transition: all 5s;
-    animation: cloud 10s linear;
+    animation: cloud 60s linear;
     -webkit-animation: cloud 60s linear;
-    overflow: hidden;
     top : 50px;
     left : -10%;
+}
+
+.cloud2{ 
+    position : absolute;
+    background-image: url('../medias/cloud-2.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    height : 150px;
+    transition: all 5s;
+    animation: cloud2 150s linear;
+    -webkit-animation: cloud2 150s linear;
+    top : 600px;
+    right : -10%;
 }
 
 @keyframes cloud {
@@ -70,6 +84,16 @@ header {
    
     100% {
         left : 150%;
+    }
+}
+
+@keyframes cloud2 {
+    0% {
+        right : -10%;
+    }
+   
+    100% {
+        right : 150%;
     }
 }
 
@@ -162,6 +186,7 @@ header {
 .snow {
     z-index: 100;
     pointer-events: none;
+    transition : all 3s;
 }
 
 .winter-is-coming {
@@ -179,15 +204,15 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    -webkit-animation: falling linear both;
-    animation: falling linear both;
+    -webkit-animation: falling linear infinite;
+    animation: falling linear infinite;
     -webkit-transform: translate3D(0, -100%, 0);
     transform: translate3D(0, -100%, 0);
 }
 
 .snow--near {
-    -webkit-animation-duration: 10s;
-    animation-duration: 10s;
+    -webkit-animation-duration: 15s;
+    animation-duration: 15s;
 }
 
 .snow--near+.snow--alt {
@@ -203,6 +228,16 @@ header {
 .snow--mid+.snow--alt {
     -webkit-animation-delay: 10s;
     animation-delay: 10s;
+}
+
+.snow--far {
+    -webkit-animation-duration: 60s;
+    animation-duration: 60s;
+}
+
+.snow--far+.snow--alt {
+    -webkit-animation-delay: 30s;
+    animation-delay: 30s;
 }
 
 @-webkit-keyframes falling {
@@ -226,3 +261,74 @@ header {
         transform: translate3D(7.5%, 100%, 0);
     }
 }
+
+
+#snowman {
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+    margin: 16px;
+  }
+  /* @media screen and (min-width: 720px) {
+    #snowman {
+      bottom: 3em;
+      left: 2em;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    #snowman {
+      bottom: 5em;
+      left: 3em;
+    }
+  }
+  @media screen and (min-width: 1100px) {
+    #snowman {
+      bottom: 8em;
+      left: 5em;
+    }
+  } */
+  
+  g.background__snowman {
+    -webkit-animation: rock 6s ease-in-out 2s infinite;
+            animation: rock 6s ease-in-out 2s infinite;
+    -webkit-transform-origin: 20% 100%;
+            transform-origin: 20% 100%;
+  }
+  
+  @-webkit-keyframes rock {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    60% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+    }
+    80% {
+      -webkit-transform: rotate(1deg);
+              transform: rotate(1deg);
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+  }
+  @keyframes rock {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    60% {
+      -webkit-transform: rotate(-2deg);
+              transform: rotate(-2deg);
+    }
+    80% {
+      -webkit-transform: rotate(1deg);
+              transform: rotate(1deg);
+    }
+    100% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+  }
+  
