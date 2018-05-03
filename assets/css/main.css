@@ -6,12 +6,15 @@ body {
     margin: 0;
 }
 
-header{
-    display : flex;
-    justify-content : space-between;
-    padding-top : 50px;
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
 }
 
+.moon{
+    
+}
 
 .background-bottom {
     background-image: url('../medias/background.png');
@@ -24,7 +27,6 @@ header{
     z-index: -2;
 }
 
-
 .logo {
     width: 350px;
     height: auto;
@@ -36,12 +38,12 @@ header{
 }
 
 .wrap-text {
-    margin-top: 100px;
     z-index: 1000;
 }
 
-.text-1, .text-2{
-    text-align :center;
+.text-1,
+.text-2 {
+    text-align: center;
     z-index: 1000;
 }
 
@@ -51,8 +53,6 @@ header{
     animation: aniwing 2s ease-in forwards;
     -webkit-animation: aniwing 2s ease-in forwards;
 }
-
-
 
 @keyframes aniwing {
     0% {
@@ -90,20 +90,22 @@ header{
     }
 }
 
-.text-2 path {
+/* .text-2 path {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: dash 5s linear alternate infinite;
+    animation: dash 3s linear alternate infinite;
 }
 
 @keyframes dash {
     from {
         stroke-dashoffset: 1000;
+        fill : transparent;
     }
     to {
         stroke-dashoffset: 0;
+        fill : #D82042;
     }
-}
+} */
 
 .winter-is-coming,
 .snow {
@@ -126,17 +128,15 @@ header{
     right: 0;
     bottom: 0;
     left: 0;
-    -webkit-animation: falling linear infinite both;
-    animation: falling linear infinite both;
+    -webkit-animation: falling linear both;
+    animation: falling linear both;
     -webkit-transform: translate3D(0, -100%, 0);
     transform: translate3D(0, -100%, 0);
-
 }
 
 .snow--near {
     -webkit-animation-duration: 10s;
     animation-duration: 10s;
-
 }
 
 .snow--near+.snow--alt {
@@ -147,13 +147,13 @@ header{
 .snow--mid {
     -webkit-animation-duration: 30s;
     animation-duration: 30s;
-
 }
 
 .snow--mid+.snow--alt {
     -webkit-animation-delay: 10s;
     animation-delay: 10s;
 }
+
 /* 
 .snow--far {
     -webkit-animation-duration: 30s;
