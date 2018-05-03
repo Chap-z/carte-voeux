@@ -1,19 +1,48 @@
-body {
-    background: linear-gradient(to bottom, #25303f 1%, #ffffff 100%);
+#wrap-body {
     width: 100%;
     height: 100vh;
-    position: relative;
+    position: absolute;
     margin: 0;
+    z-index : -10000000;
+    transition: all 5s;
+}
+
+.background-night {
+    background: linear-gradient(to bottom, #25303f 1%, #ffffff 100%);
+    transition: all 5s;
+}
+
+.background-sun {
+    background: linear-gradient(to bottom, #8ab6f3 1%, #ffffff 100%);
+    transition: all 5s;
 }
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding-top: 50px;
+    width: 150px;
+    height: 150px;
+    z-index : 100000000;
 }
 
-.moon{
-    
+.moon {
+    background-image: url('../medias/moon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    transition: all 5s;
+    cursor: pointer;
+
+}
+
+.sun {
+    background-image: url('../medias/sun.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    transition: all 5s;
+    cursor: pointer;
 }
 
 .background-bottom {
@@ -28,7 +57,7 @@ header {
 }
 
 .logo {
-    width: 350px;
+    max-width: 350px;
     height: auto;
     padding: 30px 30px;
 }
@@ -39,6 +68,7 @@ header {
 
 .wrap-text {
     z-index: 1000;
+    padding-top : 150px;
 }
 
 .text-1,
@@ -50,8 +80,8 @@ header {
 .text-1 path {
     stroke-dasharray: 320;
     stroke-dashoffset: 250;
-    animation: aniwing 2s ease-in forwards;
-    -webkit-animation: aniwing 2s ease-in forwards;
+    animation: aniwing 5s ease-in forwards;
+    -webkit-animation: aniwing 5s ease-in forwards;
 }
 
 @keyframes aniwing {
