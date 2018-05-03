@@ -332,3 +332,69 @@ header {
     }
   }
   
+  .light{
+    animation: lightening 8s infinite;
+    -webkit-animation: lightening 8s infinite;
+}
+
+@keyframes lightening {
+    0% {
+        fill : #F6B346;
+    }
+
+    100% {
+        fill : rgb(22, 22, 22);
+    }
+}
+
+@-webkit-keyframes lightening {
+    0% {
+        fill : #F6B346;
+    }
+
+    100% {
+        fill : rgb(22, 22, 22);
+    }
+
+  }
+
+  .red{
+    animation: color1 8s infinite;
+    -webkit-animation: color1 8s infinite;
+  }
+
+  @keyframes color1 {
+    0% {
+        fill : #C1272D;
+    }
+
+    100% {
+        fill : #fcee21;
+    }
+
+  }
+
+  @-webkit-keyframes color1 {
+    0% {
+        fill : #C1272D;
+    }
+
+    100% {
+        fill : #fcee21;
+    }
+
+  }
+
+  .house{
+      position : absolute;
+      bottom : 50px;
+      left : 150px;
+
+  }
+
+  .trees{
+    position : absolute;
+    bottom : 60px;
+
+    right : 150px;
+}
